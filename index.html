@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Zeno Photo Archive — a curated digital gallery of photographic fragments, textures, light, and memory."
+    />
+    <title>Zeno Photo Archive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="ambient" aria-hidden="true"></div>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+
+    <header class="site-header" data-header>
+      <a class="brand magnetic" href="#top" aria-label="Zeno Photo Archive home">
+        <span>Zeno</span>
+        <span>Photo Archive</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="magnetic" href="#selected">Selected</a>
+        <a class="magnetic" href="#archive">Archive</a>
+        <a class="magnetic" href="#statement">Statement</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Digital gallery · photographic fragments</p>
+          <h1 id="hero-title">Visual Archive</h1>
+          <p class="hero-subtitle">
+            A curated collection of photographic fragments, textures, light,
+            and memory.
+          </p>
+        </div>
+        <div class="hero-stage reveal" data-hero-stage>
+          <div class="hero-frame" data-hero-frame></div>
+          <div class="hero-meta" data-hero-meta>
+            <span>Frame 00</span>
+            <span>Awaiting photographs</span>
+          </div>
+        </div>
+        <div class="scroll-note reveal">
+          <span></span>
+          <p>Scroll to browse the archive</p>
+        </div>
+      </section>
+
+      <section id="selected" class="section selected-section" aria-labelledby="selected-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Selected frames</p>
+          <h2 id="selected-title">A slow sequence of light, texture, and distance.</h2>
+        </div>
+        <div class="featured-grid" data-featured-grid></div>
+      </section>
+
+      <section id="archive" class="section archive-section" aria-labelledby="archive-title">
+        <div class="section-heading reveal compact">
+          <p class="eyebrow">Contact sheet</p>
+          <h2 id="archive-title">Full archive</h2>
+          <p>
+            Hover to let each frame pull its own atmosphere into the page.
+            Click any frame to enter the immersive viewer.
+          </p>
+        </div>
+        <div class="archive-grid" data-archive-grid></div>
+      </section>
+
+      <section id="statement" class="section statement-section" aria-labelledby="statement-title">
+        <div class="statement-card reveal">
+          <p class="eyebrow">Statement</p>
+          <h2 id="statement-title">Photography as a visual archive, interface as the frame.</h2>
+          <p>
+            This site collects personal photographic fragments into a quiet
+            digital exhibition. The photographs remain the center; layout,
+            motion, and computational color feedback are used only to shape
+            atmosphere and reading rhythm.
+          </p>
+          <p>
+            It is designed as a small bridge between photography, visual design,
+            and AI-era interaction thinking: restrained, responsive, and built
+            for continued curation.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <div class="viewer" data-viewer aria-hidden="true" role="dialog" aria-modal="true" aria-label="Photo viewer">
+      <button class="viewer-close magnetic" type="button" data-viewer-close aria-label="Close viewer">Close</button>
+      <button class="viewer-nav viewer-prev magnetic" type="button" data-viewer-prev aria-label="Previous photo">Prev</button>
+      <figure class="viewer-figure">
+        <img data-viewer-image alt="" />
+        <figcaption class="viewer-caption">
+          <span data-viewer-number>Frame 00</span>
+          <strong data-viewer-title>Untitled</strong>
+          <em data-viewer-category>Archive</em>
+        </figcaption>
+      </figure>
+      <button class="viewer-nav viewer-next magnetic" type="button" data-viewer-next aria-label="Next photo">Next</button>
+    </div>
+
+    <script src="./assets/photos.js"></script>
+    <script src="./assets/app.js"></script>
+  </body>
+</html>
